@@ -492,7 +492,7 @@ section {
    =================================== */
 .resume-section {
     background: var(--bg-light);
-    padding: 4rem 1.5rem;
+    padding: 2rem 1.5rem;
 }
 
 .resume-container {
@@ -500,14 +500,14 @@ section {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .resume-block {
     background: var(--bg-light-secondary);
     padding: 2rem;
     border-radius: 12px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     box-shadow: var(--shadow);
     border-left: 4px solid var(--primary-color);
 }
@@ -590,7 +590,7 @@ section {
    =================================== */
 .resume-info {
     background: var(--bg-light-secondary);
-    padding: 4rem 1.5rem;
+    padding: 2.5rem 1.5rem;
 }
 
 .info-grid {
@@ -603,7 +603,7 @@ section {
 
 .info-card {
     background: var(--bg-light);
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
     border-top: 4px solid var(--primary-color);
@@ -626,7 +626,7 @@ section {
 .cta-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: white;
-    padding: 5rem 1.5rem;
+    padding: 3rem 1.5rem;
     text-align: center;
 }
 
