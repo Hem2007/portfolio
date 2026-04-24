@@ -393,6 +393,19 @@ section {
     margin-bottom: 1rem;
 }
 
+.python-logo {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    background: linear-gradient(135deg, #3776ab, #ffd43b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
 .skill-card h3 {
     color: var(--primary-color);
     margin-bottom: 0.8rem;
@@ -656,104 +669,314 @@ section {
 }
 
 /* ===================================
-   Responsive Design
+   Responsive Design - Mobile First Approach
    =================================== */
-@media (max-width: 768px) {
+
+/* ===================================
+   Extra Large Devices (1200px and up)
+   =================================== */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .hero-image {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+/* ===================================
+   Large Devices (992px to 1199px)
+   =================================== */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .nav-menu {
+        gap: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero-image {
+        width: 280px;
+        height: 280px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .connect-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===================================
+   Medium Devices (768px to 991px)
+   =================================== */
+@media (min-width: 768px) and (max-width: 991px) {
     .nav-menu {
         gap: 1rem;
         font-size: 0.95rem;
     }
 
+    .theme-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         gap: 2rem;
-    }
-
-    .hero-image {
-        width: 220px;
-        height: 220px;
+        text-align: center;
     }
 
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+    }
+
+    .hero-image {
+        width: 240px;
+        height: 240px;
     }
 
     .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+    }
+
+    .description {
+        font-size: 1.05rem;
     }
 
     .cta-buttons {
-        flex-direction: column;
+        justify-content: center;
+        flex-direction: row;
     }
 
     .stats-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .stat-card {
+        padding: 1.5rem;
+    }
+
+    .stat-card h3 {
+        font-size: 2.2rem;
     }
 
     .about-grid {
         grid-template-columns: 1fr;
     }
 
+    .about-item {
+        padding: 2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-card {
+        padding: 1.8rem;
+    }
+
+    .connect-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .connect-card {
+        padding: 2rem;
+    }
+
+    .resume-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .resume-block {
+        padding: 1.5rem;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-card {
+        padding: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .page-header p {
+        font-size: 1.1rem;
+    }
+
+    section h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* ===================================
+   Small Devices (576px to 767px)
+   =================================== */
+@media (min-width: 576px) and (max-width: 767px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .nav-menu {
+        gap: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .theme-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stat-card {
+        padding: 1.2rem;
+    }
+
+    .stat-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .stat-card p {
+        font-size: 0.9rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-item {
+        padding: 1.5rem;
+    }
+
+    .about-item h3 {
+        font-size: 1.2rem;
+    }
+
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 1.5rem;
+    }
+
+    .skill-card h3 {
+        font-size: 1.1rem;
     }
 
     .connect-links {
         grid-template-columns: 1fr;
     }
 
-    .resume-container {
-        grid-template-columns: 1fr;
+    .connect-card {
+        padding: 1.8rem;
     }
 
-    .page-header h1 {
-        font-size: 2.2rem;
+    .connect-card .icon {
+        font-size: 3rem;
+    }
+
+    .connect-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .resume-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .resume-block {
+        padding: 1.2rem;
+    }
+
+    .resume-block h3 {
+        font-size: 1.1rem;
     }
 
     .info-grid {
         grid-template-columns: 1fr;
     }
-}
 
-@media (max-width: 480px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 1rem;
+    .info-card {
+        padding: 1.8rem;
     }
 
-    .nav-menu {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
+    .info-card h3 {
+        font-size: 1.1rem;
     }
 
-    .logo {
-        font-size: 1.2rem;
+    .page-header {
+        padding: 3rem 0;
     }
 
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-    }
-
-    .description {
-        font-size: 0.95rem;
-    }
-
-    .hero-image {
-        width: 180px;
-        height: 180px;
-    }
-
-    .stats-container {
-        grid-template-columns: 1fr;
-    }
-
-    .stat-card h3 {
+    .page-header h1 {
         font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
     }
 
     section {
@@ -761,23 +984,532 @@ section {
     }
 
     section h2 {
+        font-size: 1.9rem;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .cta-section p {
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .footer {
+        padding: 2rem 1rem;
+    }
+}
+
+/* ===================================
+   Extra Small Devices (below 576px)
+   =================================== */
+@media (max-width: 575px) {
+    /* Global Mobile Optimizations */
+    body {
+        font-size: 16px; /* Prevent zoom on iOS */
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+
+    /* Navigation - Mobile First */
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0;
+        display: block;
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .theme-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        width: 100%;
+        max-width: 120px;
+        margin: 0 auto;
+    }
+
+    /* Hero Section - Mobile Optimized */
+    .hero {
+        padding: 3rem 0;
+        margin-top: 0;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .hero-image-wrapper {
+        order: -1; /* Image first on mobile */
+        margin-bottom: 1rem;
+    }
+
+    .hero-image {
+        width: 160px;
+        height: 160px;
+        border-radius: 15px;
+    }
+
+    .hero-content h1 {
         font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* Stats Section - Mobile Optimized */
+    .stats {
+        padding: 2.5rem 0;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .stat-card h3 {
+        font-size: 1.6rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .stat-card p {
+        font-size: 0.85rem;
+    }
+
+    /* About Section - Mobile Optimized */
+    .about {
+        padding: 2.5rem 0;
+    }
+
+    .about h2 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .about-item {
+        padding: 1.2rem;
+        border-left: 3px solid var(--primary-color);
+    }
+
+    .about-item h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .about-item p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Skills Section - Mobile Optimized */
+    .skills-section {
+        padding: 2.5rem 0;
+    }
+
+    .skills-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
     }
 
-    .page-header h1 {
-        font-size: 1.7rem;
+    .skill-card {
+        padding: 1.2rem;
+        border-radius: 8px;
     }
 
-    .page-header p {
+    .skill-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .skill-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .skill-card p {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+
+    .skill-level {
+        height: 6px;
+        border-radius: 3px;
+    }
+
+    /* Connect Section - Mobile Optimized */
+    .connect {
+        padding: 2.5rem 0;
+    }
+
+    .connect h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .connect-links {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .connect-card {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .connect-card .icon {
+        font-size: 2.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .connect-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .connect-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Resume Section - Mobile Optimized */
+    .resume-section {
+        padding: 2.5rem 0;
+    }
+
+    .resume-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .resume-block {
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+        border-left: 3px solid var(--primary-color);
+    }
+
+    .resume-block h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .resume-list li {
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+
+    .skills-summary {
+        gap: 0.8rem;
+    }
+
+    .skill-group {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .experience-item {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .experience-item h4 {
         font-size: 1rem;
     }
 
-    .btn {
-        padding: 0.8rem 1.5rem;
+    .position-meta {
+        font-size: 0.85rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .education-item h4,
+    .project-item h4 {
+        font-size: 1rem;
+    }
+
+    .project-item p {
+        font-size: 0.9rem;
+    }
+
+    /* Resume Info - Mobile Optimized */
+    .resume-info {
+        padding: 2.5rem 0;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .info-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .info-card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* Page Header - Mobile Optimized */
+    .page-header {
+        padding: 2.5rem 0;
+        margin-top: 0;
+    }
+
+    .page-header h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .page-header p {
         font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* CTA Section - Mobile Optimized */
+    .cta-section {
+        padding: 3rem 0;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    /* Footer - Mobile Optimized */
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .footer-subtitle {
+        font-size: 0.85rem;
+    }
+
+    /* Global Section Spacing */
+    section {
+        padding: 2rem 0;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Container Adjustments */
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Touch-friendly interactions */
+    .btn,
+    .connect-card,
+    .skill-card,
+    .about-item,
+    .info-card {
+        min-height: 44px; /* iOS touch target minimum */
+    }
+
+    /* Prevent horizontal scroll */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* Improve readability on small screens */
+    p, li {
+        line-height: 1.5;
+    }
+
+    /* Better spacing for mobile */
+    .section-subtitle {
+        margin-bottom: 2rem;
+    }
+}
+
+/* ===================================
+   iOS Specific Fixes
+   =================================== */
+@supports (-webkit-touch-callout: none) {
+    /* iOS Safari specific styles */
+    .hero-image {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    .btn {
+        -webkit-appearance: none;
+        appearance: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .connect-card,
+    .skill-card,
+    .about-item {
+        -webkit-tap-highlight-color: rgba(37, 99, 235, 0.1);
+    }
+}
+
+/* ===================================
+   Android Specific Fixes
+   =================================== */
+@media screen and (max-width: 575px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    /* Android specific optimizations */
+    .nav-container {
+        padding: 0 0.8rem;
+    }
+
+    .hero-container {
+        padding: 0 0.8rem;
+    }
+
+    .stats-container {
+        padding: 0 0.8rem;
+    }
+
+    .about-grid,
+    .skills-grid,
+    .connect-links,
+    .info-grid {
+        padding: 0 0.8rem;
+    }
+
+    .resume-container {
+        padding: 0 0.8rem;
+    }
+}
+
+/* ===================================
+   Windows Phone Specific Fixes
+   =================================== */
+@-ms-viewport {
+    width: device-width;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* Windows Phone specific styles */
+    .navbar {
+        position: relative; /* Fix sticky positioning issues */
+    }
+
+    .hero-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ===================================
+   Print Styles (for PDF generation)
+   =================================== */
+@media print {
+    .navbar,
+    .theme-btn,
+    .cta-buttons {
+        display: none !important;
+    }
+
+    .hero,
+    .stats,
+    .connect {
+        page-break-inside: avoid;
+    }
+
+    .resume-block {
+        break-inside: avoid;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
     }
 }
