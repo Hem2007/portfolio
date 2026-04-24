@@ -725,9 +725,33 @@ section {
 }
 
 /* ===================================
-   Medium Devices (768px to 991px)
+   Medium Devices (768px to 991px) - Mobile Navigation
    =================================== */
 @media (min-width: 768px) and (max-width: 991px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0;
+        display: block;
+        width: 100%;
+    }
+
+    .theme-btn {
+        width: 100%;
+        max-width: 150px;
+        margin: 0 auto;
+    }
+
     .nav-menu {
         gap: 1rem;
         font-size: 0.95rem;
@@ -834,11 +858,32 @@ section {
 }
 
 /* ===================================
-   Small Devices (576px to 767px)
+   Small Devices (576px to 767px) - Mobile Navigation
    =================================== */
 @media (min-width: 576px) and (max-width: 767px) {
     .nav-container {
+        flex-direction: column;
+        gap: 1rem;
         padding: 0 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0;
+        display: block;
+        width: 100%;
+    }
+
+    .theme-btn {
+        width: 100%;
+        max-width: 140px;
+        margin: 0 auto;
     }
 
     .nav-menu {
